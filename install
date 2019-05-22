@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Install DHCS Engineering Tools
+# Run with
+# sh 
+
+echo "Installing xcode command line tools"
+xcode-select --install
+
+echo "Installing Homebrew package manager"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
