@@ -10,3 +10,40 @@ echo "Also installs Xcode Command Line Tools"
 
 bash <(curl -fsSL https://raw.githubusercontent.com/ca-mmis/jamf-macos-scripts/master/scripts/SplashBuddy/installHomebrew.sh)
 
+## declare an array variable
+declare -a arr=("brew install zsh cjbassi/gotop/gotop htop ctop sf-pwgen curl wget tree vim tmux" 
+                "brew cask"
+                "brew cask install visual-studio-code" 
+                "brew cask install typora" 
+                "brew cask install slack" 
+                "brew cask install drawio" 
+                "brew cask install firefox" 
+                "brew cask install google-chrome" 
+                "brew cask install virtualbox" 
+                "brew cask install virtualbox-extension-pack" 
+                "brew cask install docker" 
+                "brew cask install postman" 
+                "brew cask install sublime-text" 
+                "brew cask install iterm2" 
+                "brew cask install microsoft-office" 
+                "brew cask install sourcetree")
+
+exit_on_error() {
+    exit_code=$1
+    last_command=${@:2}
+    if [ $exit_code -gt 0 ] && [ $exit_code -lt 127 ]; then
+        >&2 echo "\"${last_command}\" command failed with exit code ${exit_code}."
+        read -p "Press enter to continue"
+        exit $exit_code
+    fi
+}
+
+## now loop through the above array
+for i in "${arr[@]}"
+do
+   echo "Installing : " $i
+   `$i`
+   exit_on_error $? !!
+   # or do whatever with individual element of the array
+done
+
