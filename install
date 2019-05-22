@@ -19,14 +19,16 @@ declare -a arr=("brew install zsh cjbassi/gotop/gotop htop ctop sf-pwgen curl wg
                 "brew cask install drawio" 
                 "brew cask install firefox" 
                 "brew cask install google-chrome" 
-                "brew cask install virtualbox" 
-                "brew cask install virtualbox-extension-pack" 
                 "brew cask install docker" 
                 "brew cask install postman" 
                 "brew cask install sublime-text" 
                 "brew cask install iterm2" 
-                "brew cask install microsoft-office" 
-                "brew cask install sourcetree")
+                "brew cask install sourcetree"
+                "brew cask install microsoft-office")
+
+#                "brew cask install virtualbox" # requires sudo, system extension blocked
+#                "brew cask install virtualbox-extension-pack" # install failed
+
 
 exit_on_error() {
     exit_code=$1
