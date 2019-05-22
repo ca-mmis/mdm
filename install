@@ -1,9 +1,12 @@
 #!/bin/sh
 
 # Install DHCS Engineering Tools
-# Run with
+# IMPORTANT: Run sudo bash before running this script on a machine
+#           When running from JAMF sudo is not needed
 # bash <(curl -fsSL https://raw.githubusercontent.com/ca-mmis/mdm/PAT-298-base-configuration/install)
 
 echo "Installing Homebrew package manager"
 echo "Also installs Xcode Command Line Tools" 
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+bash <(curl -fsSL https://raw.githubusercontent.com/ca-mmis/jamf-macos-scripts/master/scripts/SplashBuddy/installHomebrew.sh)
+
