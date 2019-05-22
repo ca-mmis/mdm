@@ -2,10 +2,8 @@
 
 # Install DHCS Engineering Tools
 # Run with
-# sh 
-
-echo "Installing xcode command line tools"
-xcode-select --install
+# bash <(curl -fsSL https://raw.githubusercontent.com/ca-mmis/mdm/PAT-298-base-configuration/install)
 
 echo "Installing Homebrew package manager"
+echo "Also installs Xcode Command Line Tools" 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
