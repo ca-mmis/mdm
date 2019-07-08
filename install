@@ -3,7 +3,7 @@
 # Install DHCS Engineering Tools
 # IMPORTANT: Run sudo bash before running this script when manually provisioning a MacBook
 #           When running from JAMF sudo is not needed
-# bash <(curl -fsSL https://raw.githubusercontent.com/ca-mmis/mdm/PAT-298-base-configuration/install)
+# bash <(curl -fsSL https://raw.githubusercontent.com/ca-mmis/mdm/master/install)
 
 echo "Installing Homebrew package manager"
 echo "Also installs Xcode Command Line Tools" 
